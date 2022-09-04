@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2{
+    color: #FFF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+body{
+    background-color: black;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+input{
+    margin: 2rem;    
+    width: 500px;
+    height: 40px;
+    border-radius: 0.5rem;
+    background: linear-gradient(45deg,rgb(153,51,255) 0%,rgb(255,102,102) 100%);
+    color: #FFF;
+    font-size: 23px;
 }
 
-.App-link {
-  color: #61dafb;
+::placeholder{
+    padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card{
+    
+    background-color: wheat;
+    border-radius: .5rem;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .4);
+    margin: 1rem 0; 
+    height: 210px;
+    max-width: 100%;
+    margin: 10px;
+    cursor: pointer;
+    transform: translateY(var(--translate-y, 0));
+    overflow: hidden;
+    object-fit: contain; 
 }
+
+.card img {
+        width: 100%;
+        height: 10rem;
+        align-self: center;
+}
+
+
+.card:hover{
+    --translate-y: 2px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .7);
+    ;
+}
+
+button{
+    background: linear-gradient(45deg,rgb(153,51,255) 0%,rgb(255,102,102) 100%);
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid;
+    height: 37px;
+    width: 85px;
+    cursor: pointer;
+}
+
+.grid-cards{
+    display: grid;
+    margin: 2rem 0;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, auto));
+    grid-gap: 0.8rem;
+
+}
+
+
+.card-container{
+    box-sizing: border-box;
+    width: 300px;
+    height: 100px;
+    border-radius: 1px solid;
+}
+
+
+span {
+    color: black;
+}
+
